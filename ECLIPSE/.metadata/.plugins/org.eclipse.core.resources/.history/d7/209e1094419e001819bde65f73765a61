@@ -1,0 +1,41 @@
+package StackByLinkedList;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class LinkedStack implements Stack{
+
+	private int counter = 0;
+	List<Integer> list = new ArrayList<>();
+	
+	@Override
+	public int size() {
+		return list.size();
+	}
+
+	@Override
+	public boolean isEmpty() {
+		return list.isEmpty();
+	}
+
+	@Override
+	public void push(int element) {
+		list.add(element);
+		counter++;
+	}
+
+	@Override
+	public int pop() {
+		counter--;
+		return list.remove(counter);		
+	}
+
+	@Override
+	public int peek() {
+		return list.get(0);
+	}
+
+	
+	
+	
+}

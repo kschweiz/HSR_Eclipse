@@ -1,0 +1,16 @@
+package StackByLinkedList;
+
+public class Stack {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+
+
+class LinkedStack implements Stack{
+	
+}

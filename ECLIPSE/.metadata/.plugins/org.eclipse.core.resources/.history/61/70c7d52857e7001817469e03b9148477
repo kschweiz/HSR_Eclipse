@@ -1,0 +1,24 @@
+import java.util.concurrent.SynchronousQueue;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Kaffe kaffe = new Espreso();
+		kaffe.print();
+
+	}
+
+}
+
+
+public class Kaffe{
+	public void print() {
+		System.out.println("Kaffe");
+	}
+}
+
+public class Espreso extend Kaffe{
+	public void print() {
+		System.out.println("Espresso");
+	}
+}

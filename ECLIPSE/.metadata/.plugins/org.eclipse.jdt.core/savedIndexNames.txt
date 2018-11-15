@@ -1,0 +1,4 @@
+INDEX VERSION 1.130+C:\Users\KSchw\OneDrive\HSR\ECLIPSE\HSR_Eclipse.git\ECLIPSE\.metadata\.plugins\org.eclipse.jdt.core
+565899265.index
+2180203905.index
+1721714348.index
