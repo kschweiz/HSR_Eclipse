@@ -35,5 +35,6 @@ class TestHut implements IColor{
 	  }
 
 	  //Tests müssen noch geschrieben werden!
+	  //Test
 
 }
