@@ -34,5 +34,4 @@ class TestHut implements IColor{
 	    assertThrows(IllegalArgumentException.class, Hut hut = new Fedora(Color.BLUE,90));
 	  }
 
-	  //Test
 }
