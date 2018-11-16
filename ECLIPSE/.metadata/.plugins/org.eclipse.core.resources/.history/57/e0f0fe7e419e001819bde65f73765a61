@@ -1,5 +1,0 @@
-package StackByLinkedList;
-
-public interface Stack {
-
-}
