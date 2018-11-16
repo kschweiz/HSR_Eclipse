@@ -1,4 +1,4 @@
-public class Fedora extends Hut implements IColor{
+public class Fedora extends Hut{
 	public Fedora(Color color, int size) {
 		setColor(color);
 		setSize(size);

@@ -11,10 +11,6 @@ public class Zylinder extends Hut {
 
 	@Override
 	public void setColor(Color color) {
-		if(color != Color.BLACK) {
-			throw new IllegalArgumentException("Zylinder muss BLACK sein!");
-		}else {
-			super.setColor(color);
-		}
+		super.setColor(color);
 	}
 }

@@ -1,16 +1,12 @@
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.Rule;
 import org.junit.jupiter.api.Test;
-import org.junit.rules.ExpectedException;
-
-
 
 class TestHut implements IColor{
 
 	@Test
-	void testZylinderMitFeder() {
+	public void testZylinderMitFeder() {
 		Hut hut = new Zylinder(55);
 		hut = new DekorateFeder(hut);
 		hut = new DekorateGeschenkverpackung(hut);
@@ -18,20 +14,34 @@ class TestHut implements IColor{
 	}
 	
 	@Test
-	void testFedoraMitGeschenkPapier() {
+	public void testFedoraMitGeschenkPapier() {
 		Hut hut = new Fedora(Color.BLUE,46);
 		hut = new DekorateGeschenkverpackung(hut);
 		assertEquals(359.9, hut.getPrice());
 	}
 	
-	 @Rule
-	  public ExpectedException exception = ExpectedException.none();
+	@Test
+	public void testModischerHut() {
+		Hut hut = new ModischerSchlapphut(Color.GREEN, 45);
+		hut = new DekorateFeder(hut);
+		hut = new DekorateGeschenkverpackung(hut);
+		assertEquals(244.9, hut.getPrice());
+	}
+	
+	@Test
+	public void testThrowsIllegalArgumentExceptionSizeGross() {
+		assertThrows(IllegalArgumentException.class, () -> {
+			new Fedora(Color.BLUE,90);
+	    });
+	}
+	
+	@Test
+	public void testThrowsIllegalArgumentExceptionSizeKlein() {
+		assertThrows(IllegalArgumentException.class, () -> {
+			new Fedora(Color.BLUE,44);
+	    });
+	}
+	
 
-	  @Test
-	  public void throwsIllegalArgumentException() {
-	    exception.expect(IllegalArgumentException.class);
-	    exception.expectMessage("Hut Grösse muss zwischen 45cm und 65cm sein!");
-	    assertThrows(IllegalArgumentException.class, Hut hut = new Fedora(Color.BLUE,90));
-	  }
 
 }

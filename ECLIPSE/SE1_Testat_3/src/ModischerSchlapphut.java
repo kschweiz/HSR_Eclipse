@@ -1,4 +1,4 @@
-public class ModischerSchlapphut extends Hut implements IColor{
+public class ModischerSchlapphut extends Hut{
 	public ModischerSchlapphut(Color color, int size) {
 		setColor(color);
 		setSize(size);
