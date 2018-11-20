@@ -8,4 +8,9 @@ public class ModischerSchlapphut extends Hut{
 	public double cost() {
 		return 200.00;
 	}
+
+	@Override
+	protected String description() {
+		return "Das ist ein Modische Schlapphut. Farbe: " + getColor() + ". Size: " + getSize() + "." ;
+	}
 }

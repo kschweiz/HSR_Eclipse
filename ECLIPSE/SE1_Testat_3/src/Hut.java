@@ -7,7 +7,13 @@ public abstract class Hut implements IColor{
 		return cost();
 	}
 	
+	public String getDescription() {
+		return description();
+	}
+	
 	protected abstract double cost();
+	protected abstract String description();
+
 	
 	public Color getColor() {
 		return color;

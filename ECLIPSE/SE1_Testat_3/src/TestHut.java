@@ -6,11 +6,10 @@ import org.junit.jupiter.api.Test;
 class TestHut implements IColor{
 
 	@Test
-	public void testZylinderMitFeder() {
+	public void testZylinderMitGeschenkPapier() {
 		Hut hut = new Zylinder(55);
-		hut = new DekorateFeder(hut);
 		hut = new DekorateGeschenkverpackung(hut);
-		assertEquals(444.9, hut.getPrice());
+		assertEquals(409.9, hut.getPrice());
 	}
 	
 	@Test
@@ -39,6 +38,14 @@ class TestHut implements IColor{
 	public void testThrowsIllegalArgumentExceptionSizeKlein() {
 		assertThrows(IllegalArgumentException.class, () -> {
 			new Fedora(Color.BLUE,44);
+	    });
+	}
+	
+	@Test
+	public void testThrowsIllegalARgumentExceptionZylinderMitFeder() {
+		assertThrows(IllegalArgumentException.class, () -> {
+			new DekorateFeder(new Zylinder(50));
+			
 	    });
 	}
 	

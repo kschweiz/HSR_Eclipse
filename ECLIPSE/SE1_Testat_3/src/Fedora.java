@@ -12,9 +12,10 @@ public class Fedora extends Hut{
 			return 300.00;
 		}
 	}
-	
+
 	@Override
-	public void setColor(Color color) {
-		super.setColor(color);
+	protected String description() {
+		return "Das ist eine Fedora. Farbe: " + getColor() + ". Size: " + getSize() + "." ;
 	}
+	
 }

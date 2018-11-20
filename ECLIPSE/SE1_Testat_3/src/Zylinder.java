@@ -10,7 +10,8 @@ public class Zylinder extends Hut {
 	}
 
 	@Override
-	public void setColor(Color color) {
-		super.setColor(color);
+	protected String description() {
+		return "Das ist ein Zylinder. Farbe: " + getColor() + ". Size: " + getSize() + "." ;
 	}
+
 }
