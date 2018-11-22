@@ -3,6 +3,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
+import IColor.Color;
+
 class TestHut implements IColor{
 
 	@Test
@@ -24,7 +26,7 @@ class TestHut implements IColor{
 		Hut hut = new ModischerSchlapphut(Color.GREEN, 45);
 		hut = new DekorateFeder(hut);
 		hut = new DekorateGeschenkverpackung(hut);
-		assertEquals(244.9, hut.getPrice());
+		assertEquals(200+35+9.90, hut.getPrice());
 	}
 	
 	@Test
@@ -49,6 +51,18 @@ class TestHut implements IColor{
 	    });
 	}
 	
-
-
+	@Test
+	public void testCheckDescriptionOne() {
+		Hut hut = new Zylinder(45);
+		hut = new DekorateGeschenkverpackung(hut);
+		assertEquals("Das ist ein Zylinder. Farbe: BLACK. Size: 45. Mit Geschenkverpackung.", hut.getDescription());
+	}
+	
+	@Test
+	public void testCheckDescriptionTwo() {
+		Hut hut = new Fedora(Color.BLUE, 55);
+		hut = new DekorateFeder(hut);
+		hut = new DekorateGeschenkverpackung(hut);
+		assertEquals("Das ist eine Fedora. Farbe: BLUE. Size: 55. Mit Feder. Mit Geschenkverpackung.", hut.getDescription());
+	}
 }
